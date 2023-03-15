@@ -1,0 +1,72 @@
+[
+  {
+    "author": {
+      "firstName": "John",
+      "id": "4c2307ba-3d40-442f-b1ff-b271f63904ca",
+      "lastName": "Doe"
+    },
+    "createdAt": 1655648404000,
+    "id": "c67ed376-52bf-4d4e-ba2a-7a0f8467b22a",
+    "status": "seen",
+    "text": "Good morning, did you sleep well?",
+    "type": "text",
+    "showStatus": false,
+    "lastSeenMsg": "16.50 · Read"
+  },
+  {
+    "author": {
+      "firstName": "Matthew",
+      "id": "82091008-a484-4a89-ae75-a22bf8d6f3ac",
+      "lastName": "White"
+    },
+    "createdAt": 1655648401000,
+    "id": "64747b28-df19-4a0c-8c47-316dc3546e3c",
+    "status": "seen",
+    "text": "Very Good morning, yes",
+    "type": "text",
+    "showStatus": false,
+    "lastSeenMsg": "16.50 · Read"
+  },
+  {
+    "author": {
+      "firstName": "Matthew",
+      "id": "82091008-a484-4a89-ae75-a22bf8d6f3ac",
+      "lastName": "White"
+    },
+    "createdAt": 1655624463000,
+    "id": "113bb2e8-f74e-42cd-aa30-4085a0f52c58",
+    "status": "seen",
+    "text": "K, I'm on my way",
+    "type": "text",
+    "showStatus": false,
+    "lastSeenMsg": "16.50 · Read"
+  },
+  {
+    "author": {
+      "firstName": "Janice",
+      "id": "e52552f4-835d-4dbe-ba77-b076e659774c",
+      "lastName": "King"
+    },
+    "createdAt": 1655624462000,
+    "id": "22212d42-1252-4641-9786-d6f83b2ce4a8",
+    "status": "seen",
+    "text": "Of course, let me know if you're on your way",
+    "type": "text",
+    "showStatus": false,
+    "lastSeenMsg": "16.50 · Read"
+  },
+  {
+    "author": {
+      "firstName": "Janice",
+      "id": "e52552f4-835d-4dbe-ba77-b076e659774d",
+      "lastName": "King"
+    },
+    "createdAt": 1655624461000,
+    "id": "afc2269a-374b-4382-8864-b3b60d1e8cd7",
+    "status": "seen",
+    "text": "Look at how chocho sleep in my arms!",
+    "type": "text",
+    "showStatus": false,
+    "lastSeenMsg": "16.50 · Read"
+  }
+]
