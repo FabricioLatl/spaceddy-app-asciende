@@ -9,34 +9,28 @@ final welcomeList = [
   WelcomeModal(
     image: welcomeImg1,
     heading: 'Encuentra tu nuevo hogar',
-    paragraph:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    paragraph: '',
   ),
   WelcomeModal(
     image: welcomeImg2,
     heading: 'Chatea con los propietarios',
-    paragraph:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    paragraph: '',
   ),
   WelcomeModal(
-    image: welcomeImg3,
-    heading: 'Facil de conversar',
-    paragraph:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-  )
+      image: welcomeImg3, heading: 'Facil de conversar', paragraph: ',')
 ];
 
 final destinationSliderList = [
   DestinationSliderModal(
     propertyImage: houseImage1,
-    propertyName: 'Nomaden Sekut',
-    propertyLocation: 'San Diego, California, USA',
+    propertyName: 'Casa',
+    propertyLocation: 'La Molina, Lima',
     propertyRatingText: '4.8',
   ),
   DestinationSliderModal(
     propertyImage: houseImage2,
-    propertyName: 'Real Bluesty',
-    propertyLocation: 'San Diego, California, USA',
+    propertyName: 'Casa',
+    propertyLocation: 'San Miguel, Lima',
     propertyRatingText: '4.8',
   ),
   DestinationSliderModal(
@@ -110,24 +104,24 @@ final flatFirstBookingSliderList = [
 final facilityList = [
   FacilityListModal(
     iconImage: bedIcon,
-    text: '4 Beds',
+    text: '4 Camas',
   ),
   FacilityListModal(
     iconImage: bathIcon,
-    text: '4 Baths',
+    text: '4 Baños',
   ),
   FacilityListModal(
     iconImage: sqftIcon,
-    text: '2830 sqft',
+    text: '100m2',
   ),
 ];
 
 final propertyColumnList = [
   CategoryListModal(
     propartyImage: houseImage3,
-    propartyName: 'Oreeframe Row House',
-    propartyLocation: 'San Diego, California, USA',
-    propartyRentText: 'Rs. 1,68,000 / Year',
+    propartyName: 'Departamento',
+    propartyLocation: 'San Isidro, Lima',
+    propartyRentText: 'S/. 168,000',
     propartyRatingText: '4.8',
     facilityList: facilityList,
   ),
