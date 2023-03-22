@@ -30,7 +30,7 @@ final destinationSliderList = [
   DestinationSliderModal(
     propertyImage: houseImage2,
     propertyName: 'Casa',
-    propertyLocation: 'San Miguel, Lima',
+    propertyLocation: 'San Miguel, Lima ',
     propertyRatingText: '4.8',
   ),
   DestinationSliderModal(
