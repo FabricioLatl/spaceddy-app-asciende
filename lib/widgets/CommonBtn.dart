@@ -29,7 +29,7 @@ class CommonBtn extends StatelessWidget {
           primary: const Color.fromRGBO(12, 12, 38, 1),
           padding:
               EdgeInsets.only(top: 13.h, bottom: 14.h, right: 14.w, left: 14.w),
-          backgroundColor: const Color.fromRGBO(13, 220, 132, 1),
+          backgroundColor: const Color.fromRGBO(247, 127, 0, 1),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12.r),
           ),

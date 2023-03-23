@@ -141,7 +141,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                                 left: 14.w),
                             minimumSize: Size(165.w, 50.w),
                             backgroundColor:
-                                const Color.fromRGBO(13, 220, 132, 1),
+                                const Color.fromRGBO(247, 127, 0, 1),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(12.r),
                             ),

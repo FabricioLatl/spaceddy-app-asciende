@@ -69,7 +69,7 @@ class _MainScreenState extends State<MainScreen> {
                       fontSize: 14.sp,
                       fontWeight: FontWeight.w500),
                 ),
-                selectedColor: const Color.fromRGBO(13, 220, 132, 1),
+                selectedColor: const Color.fromRGBO(247, 127, 0, 1),
               ),
               SalomonBottomBarItem(
                 icon: Image.asset(
@@ -87,7 +87,7 @@ class _MainScreenState extends State<MainScreen> {
                       fontSize: 14.sp,
                       fontWeight: FontWeight.w500),
                 ),
-                selectedColor: const Color.fromRGBO(13, 220, 132, 1),
+                selectedColor: const Color.fromRGBO(247, 127, 0, 1),
               ),
               SalomonBottomBarItem(
                 icon: Image.asset(
@@ -103,7 +103,7 @@ class _MainScreenState extends State<MainScreen> {
                       fontSize: 14.sp,
                       fontWeight: FontWeight.w500),
                 ),
-                selectedColor: const Color.fromRGBO(13, 220, 132, 1),
+                selectedColor: const Color.fromRGBO(247, 127, 0, 1),
               ),
               SalomonBottomBarItem(
                 icon: Image.asset(
@@ -119,7 +119,7 @@ class _MainScreenState extends State<MainScreen> {
                       fontSize: 14.sp,
                       fontWeight: FontWeight.w500),
                 ),
-                selectedColor: const Color.fromRGBO(13, 220, 132, 1),
+                selectedColor: const Color.fromRGBO(247, 127, 0, 1),
               ),
             ],
           ),

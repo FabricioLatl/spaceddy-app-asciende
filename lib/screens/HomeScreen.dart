@@ -143,17 +143,17 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: 45,
                 child: TabBar(
                   indicator: DotIndicator(
-                    color: const Color.fromRGBO(13, 220, 132, 1),
+                    color: const Color.fromRGBO(247, 127, 0, 1),
                     distanceFromCenter: 16,
                     radius: 3,
                     paintingStyle: PaintingStyle.fill,
                   ),
-                  labelColor: const Color.fromRGBO(13, 220, 132, 1),
+                  labelColor: const Color.fromRGBO(247, 127, 0, 1),
                   unselectedLabelColor: const Color.fromRGBO(119, 118, 130, 1),
                   labelStyle: TextStyle(
                     fontSize: 14.sp,
                     fontWeight: FontWeight.w700,
-                    color: const Color.fromRGBO(13, 220, 132, 1),
+                    color: const Color.fromRGBO(247, 127, 0, 1),
                   ),
                   unselectedLabelStyle: TextStyle(
                     fontSize: 14.sp,
