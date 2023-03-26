@@ -45,7 +45,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       width: size.width,
                       margin: EdgeInsets.only(bottom: 38.h),
                       child: Text(
-                        'Log in',
+                        'Iniciar Sesión',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             fontSize: 30.sp,
@@ -56,7 +56,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     const AuthInput(
                       keyBoardType: TextInputType.number,
-                      placeholder: 'Numero de Telefono',
+                      placeholder: 'Numero de Teléfono',
                     ),
                     const AuthInput(
                       keyBoardType: TextInputType.text,
@@ -71,7 +71,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               context, route.kForgotScreenRoute);
                         },
                         child: Text(
-                          'Olvidaste tu contraseña?',
+                          '¿Olvidaste tu contraseña?',
                           style: TextStyle(
                             fontSize: 10.sp,
                             fontWeight: FontWeight.w500,
@@ -81,7 +81,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                     CommonBtn(
-                      btnText: 'Log in',
+                      btnText: 'Iniciar sesión',
                       hasSpacing: EdgeInsets.symmetric(vertical: 32.h),
                       hasNavigat: true,
                       routeName: route.kMainScreenRoute,
@@ -90,7 +90,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       width: size.width,
                       margin: EdgeInsets.only(bottom: 32.h),
                       child: Text(
-                        'O has login usando',
+                        'O inicia sesión usando',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 12.sp,
@@ -125,7 +125,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'No tienes una cuenta aun?',
+                        '¿No tienes una cuenta aún?',
                         style: TextStyle(
                           fontSize: 12.sp,
                           fontWeight: FontWeight.w500,
