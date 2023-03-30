@@ -1,4 +1,3 @@
-
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_ready_rental/constants/ImageAssest.dart';
@@ -38,6 +37,7 @@ class _ProfileEditScreenState extends State<ProfileEditScreen> {
       },
     );
   }
+
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
@@ -47,7 +47,7 @@ class _ProfileEditScreenState extends State<ProfileEditScreen> {
         preferredSize: Size.fromHeight(42.h),
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: 20.w),
-          child: const Header(hasBackBtn: true, title: 'Profile Edit'),
+          child: const Header(hasBackBtn: true, title: 'Editar Perfil'),
         ),
       ),
       body: Container(
@@ -72,20 +72,21 @@ class _ProfileEditScreenState extends State<ProfileEditScreen> {
                         borderRadius: BorderRadius.circular(110.r),
                       ),
                       child: _image != null
-                      ? ClipRRect(
-                        borderRadius: BorderRadius.circular(110.r),
-                        child: Image.file(
-                          _image!,
-                          width: size.width,
-                          height: size.height,
-                          fit: BoxFit.cover,
-                        ),
-                      ) : Image.asset(
-                        userImage,
-                        width: size.width,
-                        height: size.height,
-                        fit: BoxFit.contain,
-                      ),
+                          ? ClipRRect(
+                              borderRadius: BorderRadius.circular(110.r),
+                              child: Image.file(
+                                _image!,
+                                width: size.width,
+                                height: size.height,
+                                fit: BoxFit.cover,
+                              ),
+                            )
+                          : Image.asset(
+                              userImage,
+                              width: size.width,
+                              height: size.height,
+                              fit: BoxFit.contain,
+                            ),
                     ),
                     Positioned(
                       right: 0,
@@ -104,22 +105,22 @@ class _ProfileEditScreenState extends State<ProfileEditScreen> {
                 ),
               ),
               const FloatingInput(
-                labelText: 'Full Name',
+                labelText: 'Nombre Completo',
                 hasPassword: false,
                 keyBoardType: TextInputType.text,
               ),
               const FloatingInput(
-                labelText: 'E-mail Address',
+                labelText: 'Correo Electrónico',
                 hasPassword: false,
                 keyBoardType: TextInputType.emailAddress,
               ),
               const FloatingInput(
-                labelText: 'Phone Number',
+                labelText: 'Numero de Teléfono',
                 hasPassword: false,
                 keyBoardType: TextInputType.number,
               ),
               const FloatingInput(
-                labelText: 'Birth Date',
+                labelText: 'Fecha de nacimiento',
                 hasPassword: false,
                 readOnlyInput: true,
                 onTapEvent: true,
@@ -142,7 +143,7 @@ class _ProfileEditScreenState extends State<ProfileEditScreen> {
                   child: Row(children: [
                     Expanded(
                       child: Text(
-                        'Goverment ID',
+                        'DNI',
                         style: TextStyle(
                           color: const Color.fromRGBO(119, 118, 130, 1),
                           fontSize: 12.sp,
@@ -164,7 +165,8 @@ class _ProfileEditScreenState extends State<ProfileEditScreen> {
               ),
               GestureDetector(
                 onTap: () {
-                  Navigator.pushNamed(context, route.kEmergencyContactScreenRoute);
+                  Navigator.pushNamed(
+                      context, route.kEmergencyContactScreenRoute);
                 },
                 child: Container(
                   padding: EdgeInsets.only(bottom: 15.h),
@@ -179,7 +181,7 @@ class _ProfileEditScreenState extends State<ProfileEditScreen> {
                   child: Row(children: [
                     Expanded(
                       child: Text(
-                        'Emergency Contact',
+                        'Numero de Contacto',
                         style: TextStyle(
                           color: const Color.fromRGBO(119, 118, 130, 1),
                           fontSize: 12.sp,
@@ -202,7 +204,7 @@ class _ProfileEditScreenState extends State<ProfileEditScreen> {
               SizedBox(
                 width: 165.w,
                 child: CommonBtn(
-                  btnText: 'Save Changes',
+                  btnText: 'Guardar Cambios',
                   hasSpacing: EdgeInsets.only(top: 37.h),
                 ),
               ),
@@ -212,5 +214,4 @@ class _ProfileEditScreenState extends State<ProfileEditScreen> {
       ),
     );
   }
-
 }

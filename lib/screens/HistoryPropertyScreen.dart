@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_ready_rental/constants/SampleData.dart';
 import 'package:flutter_ready_rental/widgets/BokkingDetails.dart';
@@ -42,7 +41,8 @@ class _HistoryPropertyScreenState extends State<HistoryPropertyScreen> {
         child: Stack(
           children: [
             SingleChildScrollView(
-              padding: EdgeInsets.only(top: 23.h, left: 20.w, right: 20.w, bottom: 110.h),
+              padding: EdgeInsets.only(
+                  top: 23.h, left: 20.w, right: 20.w, bottom: 110.h),
               child: Column(
                 children: [
                   const BookPropertyImgText(
@@ -66,7 +66,8 @@ class _HistoryPropertyScreenState extends State<HistoryPropertyScreen> {
                       ),
                     ),
                     child: GridView.builder(
-                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
                         childAspectRatio: 15 / 11,
                         crossAxisSpacing: 15,
                         mainAxisSpacing: 15,
@@ -78,16 +79,14 @@ class _HistoryPropertyScreenState extends State<HistoryPropertyScreen> {
                       itemCount: rentalPropertyFacilityList.length,
                       itemBuilder: (context, index) {
                         return PropartyFacilityContent(
-                          iconImage: rentalPropertyFacilityList[index].iconImage,
-                          text: rentalPropertyFacilityList[index].text,
-                          column: true
-                        );
+                            iconImage:
+                                rentalPropertyFacilityList[index].iconImage,
+                            text: rentalPropertyFacilityList[index].text,
+                            column: true);
                       },
                     ),
                   ),
-                  const BokkingDetails(
-                    bookingDetailHeading: 'Your Booking'
-                  ),
+                  const BokkingDetails(bookingDetailHeading: 'Your Booking'),
                   const BokkingPriceDetails(
                     bookingPriceDetailHeading: 'Price Details',
                   ),
@@ -153,7 +152,7 @@ class _HistoryPropertyScreenState extends State<HistoryPropertyScreen> {
                           SizedBox(
                             width: size.width,
                             child: Text(
-                              '/per month',
+                              '/por mes',
                               textAlign: TextAlign.right,
                               style: TextStyle(
                                 fontSize: 14.sp,

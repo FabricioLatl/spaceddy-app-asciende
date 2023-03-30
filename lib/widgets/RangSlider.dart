@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_ready_rental/constants/ImageAssest.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -29,7 +28,7 @@ class _RangSliderState extends State<RangSlider> {
               children: [
                 Expanded(
                   child: Text(
-                    'Price per Month',
+                    'Price por mes',
                     style: TextStyle(
                       fontSize: 18.sp,
                       fontWeight: FontWeight.w700,
@@ -54,38 +53,40 @@ class _RangSliderState extends State<RangSlider> {
               ],
             ),
           ),
-          dropDown ? SfRangeSliderTheme(
-            data: SfRangeSliderThemeData(
-              thumbColor: Colors.white,
-              thumbRadius: 14.w,
-              thumbStrokeWidth: 4.w,
-              thumbStrokeColor: Colors.white,
-              tooltipBackgroundColor: const Color.fromRGBO(241, 95, 95, 1),
-              tooltipTextStyle: TextStyle(
-                color: Colors.white,
-                fontSize: 16.sp,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-            child: SfRangeSlider(
-              min: 0.0,
-              max: 1000.0,
-              values: _value,
-              interval: 900,
-              showTicks: false,
-              showLabels: false,
-              enableTooltip: true,
-              minorTicksPerInterval: 1,
-              activeColor: const Color.fromRGBO(241, 95, 95, 1),
-              inactiveColor: const Color.fromRGBO(225, 240, 240, 1),
-              onChanged: (SfRangeValues newValue) {
-                setState(() {
-                  _value = newValue;
-                });
-              },
-            ),
-          )
-          : Container(),
+          dropDown
+              ? SfRangeSliderTheme(
+                  data: SfRangeSliderThemeData(
+                    thumbColor: Colors.white,
+                    thumbRadius: 14.w,
+                    thumbStrokeWidth: 4.w,
+                    thumbStrokeColor: Colors.white,
+                    tooltipBackgroundColor:
+                        const Color.fromRGBO(241, 95, 95, 1),
+                    tooltipTextStyle: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16.sp,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                  child: SfRangeSlider(
+                    min: 0.0,
+                    max: 1000.0,
+                    values: _value,
+                    interval: 900,
+                    showTicks: false,
+                    showLabels: false,
+                    enableTooltip: true,
+                    minorTicksPerInterval: 1,
+                    activeColor: const Color.fromRGBO(241, 95, 95, 1),
+                    inactiveColor: const Color.fromRGBO(225, 240, 240, 1),
+                    onChanged: (SfRangeValues newValue) {
+                      setState(() {
+                        _value = newValue;
+                      });
+                    },
+                  ),
+                )
+              : Container(),
         ],
       ),
     );

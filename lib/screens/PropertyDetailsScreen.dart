@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_ready_rental/constants/ImageAssest.dart';
 import 'package:flutter_ready_rental/constants/SampleData.dart';
@@ -29,9 +28,8 @@ class _PropertyDetailsScreenState extends State<PropertyDetailsScreen> {
     double statusBarHeight = MediaQuery.of(context).padding.top;
     SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(
-        statusBarColor: Color.fromRGBO(250, 250, 250, 0),
-        statusBarIconBrightness: Brightness.dark
-      ),
+          statusBarColor: Color.fromRGBO(250, 250, 250, 0),
+          statusBarIconBrightness: Brightness.dark),
     );
     return Scaffold(
       resizeToAvoidBottomInset: false,
@@ -48,12 +46,11 @@ class _PropertyDetailsScreenState extends State<PropertyDetailsScreen> {
                   Stack(
                     children: [
                       BookPropertyImgText(
-                        bookPropertyName: 'OM Sai Row House',
-                        hasImageRadius: false,
-                        hasTextPadding: true,
-                        hasImageHeight: true,
-                        bookPropertyImageHeight: 375.h
-                      ),
+                          bookPropertyName: 'OM Sai Row House',
+                          hasImageRadius: false,
+                          hasTextPadding: true,
+                          hasImageHeight: true,
+                          bookPropertyImageHeight: 375.h),
                       Positioned(
                         top: statusBarHeight + 14.h,
                         left: 20.w,
@@ -92,7 +89,8 @@ class _PropertyDetailsScreenState extends State<PropertyDetailsScreen> {
                             ),
                           ),
                           child: GridView.builder(
-                            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                            gridDelegate:
+                                const SliverGridDelegateWithFixedCrossAxisCount(
                               childAspectRatio: 15 / 11,
                               crossAxisSpacing: 15,
                               mainAxisSpacing: 15,
@@ -104,10 +102,10 @@ class _PropertyDetailsScreenState extends State<PropertyDetailsScreen> {
                             itemCount: rentalPropertyFacilityList.length,
                             itemBuilder: (context, index) {
                               return PropartyFacilityContent(
-                                iconImage: rentalPropertyFacilityList[index].iconImage,
-                                text: rentalPropertyFacilityList[index].text,
-                                column: true
-                              );
+                                  iconImage: rentalPropertyFacilityList[index]
+                                      .iconImage,
+                                  text: rentalPropertyFacilityList[index].text,
+                                  column: true);
                             },
                           ),
                         ),
@@ -132,7 +130,9 @@ class _PropertyDetailsScreenState extends State<PropertyDetailsScreen> {
                       itemCount: propertyDetailsPhotoList.length,
                       itemBuilder: (context, index) {
                         return Container(
-                          margin: index == 0 ? EdgeInsets.zero : EdgeInsets.only(left: 9.w),
+                          margin: index == 0
+                              ? EdgeInsets.zero
+                              : EdgeInsets.only(left: 9.w),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(10.r),
                             child: Image.asset(
@@ -185,8 +185,7 @@ class _PropertyDetailsScreenState extends State<PropertyDetailsScreen> {
                           height: 218.w,
                           margin: EdgeInsets.only(bottom: 33.h),
                           child: const GoogleMapPage(
-                            locationMarkIcon: locationMarkBlueIcon
-                          ),
+                              locationMarkIcon: locationMarkBlueIcon),
                         ),
                         const CommonHeading(
                           headingText: 'Raiting',
@@ -212,13 +211,15 @@ class _PropertyDetailsScreenState extends State<PropertyDetailsScreen> {
                             itemCount: propertyDetailsReviewsList.length,
                             itemBuilder: (context, index) {
                               return PropertyDetailsReviewsList(
-                                image: propertyDetailsReviewsList[index].image,
-                                name: propertyDetailsReviewsList[index].name,
-                                date: propertyDetailsReviewsList[index].date,
-                                ratingText: propertyDetailsReviewsList[index].ratingText,
-                                paragraph: propertyDetailsReviewsList[index].paragraph,
-                                hasMargin: index == 0 ? false :  true
-                              );
+                                  image:
+                                      propertyDetailsReviewsList[index].image,
+                                  name: propertyDetailsReviewsList[index].name,
+                                  date: propertyDetailsReviewsList[index].date,
+                                  ratingText: propertyDetailsReviewsList[index]
+                                      .ratingText,
+                                  paragraph: propertyDetailsReviewsList[index]
+                                      .paragraph,
+                                  hasMargin: index == 0 ? false : true);
                             },
                           ),
                         ),
@@ -275,7 +276,7 @@ class _PropertyDetailsScreenState extends State<PropertyDetailsScreen> {
                           SizedBox(
                             width: size.width,
                             child: Text(
-                              '/per month',
+                              '/por mes',
                               textAlign: TextAlign.right,
                               style: TextStyle(
                                 fontSize: 14.sp,
