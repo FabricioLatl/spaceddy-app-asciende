@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "798927066947",
+    "project_id": "spaceddy-762f9",
+    "storage_bucket": "spaceddy-762f9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798927066947:android:d1df9f6e23ce5df78501f6",
+        "android_client_info": {
+          "package_name": "com.example.flutter_ready_rental"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "798927066947-gu5kehm9uqjo8p6kh6ibjadc7mgnms6a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBU1ZfklsDaNLNsaiqGDL5LS8hp0LwVVM8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "798927066947-gu5kehm9uqjo8p6kh6ibjadc7mgnms6a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

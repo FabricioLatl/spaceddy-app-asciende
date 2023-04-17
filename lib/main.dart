@@ -4,10 +4,12 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_ready_rental/routes/AllRoutes.dart';
 import 'package:flutter_ready_rental/routes/Routes.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  await Firebase.initializeApp();
   runApp(const MyApp());
   // SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
   //   systemNavigationBarColor: Color.fromRGBO(250, 250, 250, 1),
