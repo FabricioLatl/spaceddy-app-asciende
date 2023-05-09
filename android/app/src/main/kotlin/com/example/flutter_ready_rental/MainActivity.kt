@@ -1,6 +1,0 @@
-package com.example.flutter_ready_rental
-
-import io.flutter.embedding.android.FlutterActivity
-
-class MainActivity: FlutterActivity() {
-}

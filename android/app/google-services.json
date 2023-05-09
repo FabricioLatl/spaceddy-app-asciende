@@ -1,34 +1,49 @@
 {
   "project_info": {
-    "project_number": "798927066947",
-    "project_id": "spaceddy-762f9",
-    "storage_bucket": "spaceddy-762f9.appspot.com"
+    "project_number": "812584750225",
+    "project_id": "spaceddy-flutterflow",
+    "storage_bucket": "spaceddy-flutterflow.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:798927066947:android:d1df9f6e23ce5df78501f6",
+        "mobilesdk_app_id": "1:812584750225:android:8842b09a0e0ec2497b0330",
         "android_client_info": {
-          "package_name": "com.example.flutter_ready_rental"
+          "package_name": "com.mycompany.spaceddy"
         }
       },
       "oauth_client": [
         {
-          "client_id": "798927066947-gu5kehm9uqjo8p6kh6ibjadc7mgnms6a.apps.googleusercontent.com",
+          "client_id": "812584750225-lovm2ar7gabrqp76nc54td5gh2vf3vin.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.spaceddy",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "812584750225-umdtn1mddog0tic12qhm4nqj8o9p8is9.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBU1ZfklsDaNLNsaiqGDL5LS8hp0LwVVM8"
+          "current_key": "AIzaSyBGBH1eJrB-XvtmJ2udBBnLUet1JYRdqM8"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "798927066947-gu5kehm9uqjo8p6kh6ibjadc7mgnms6a.apps.googleusercontent.com",
+              "client_id": "812584750225-umdtn1mddog0tic12qhm4nqj8o9p8is9.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "812584750225-i4h2s2d84miccobmfle7q0mj5s76drc7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.spaceddy"
+              }
             }
           ]
         }
