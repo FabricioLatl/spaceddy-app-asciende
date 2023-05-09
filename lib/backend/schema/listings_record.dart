@@ -15,13 +15,34 @@ abstract class ListingsRecord
 
   double? get price;
 
+  String? get tipoDeInmueble;
+
+  int? get numeroDormitorios;
+
+  bool? get enConstruccion;
+
+  int? get numeroBanos;
+
+  int? get numeroEstacionamientos;
+
+  double? get superficie;
+
+  int? get antiguedad;
+
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference? get ffRef;
   DocumentReference get reference => ffRef!;
 
   static void _initializeBuilder(ListingsRecordBuilder builder) => builder
     ..name = ''
-    ..price = 0.0;
+    ..price = 0.0
+    ..tipoDeInmueble = ''
+    ..numeroDormitorios = 0
+    ..enConstruccion = false
+    ..numeroBanos = 0
+    ..numeroEstacionamientos = 0
+    ..superficie = 0.0
+    ..antiguedad = 0;
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('Listings');
@@ -47,13 +68,27 @@ abstract class ListingsRecord
 Map<String, dynamic> createListingsRecordData({
   String? name,
   double? price,
+  String? tipoDeInmueble,
+  int? numeroDormitorios,
+  bool? enConstruccion,
+  int? numeroBanos,
+  int? numeroEstacionamientos,
+  double? superficie,
+  int? antiguedad,
 }) {
   final firestoreData = serializers.toFirestore(
     ListingsRecord.serializer,
     ListingsRecord(
       (l) => l
         ..name = name
-        ..price = price,
+        ..price = price
+        ..tipoDeInmueble = tipoDeInmueble
+        ..numeroDormitorios = numeroDormitorios
+        ..enConstruccion = enConstruccion
+        ..numeroBanos = numeroBanos
+        ..numeroEstacionamientos = numeroEstacionamientos
+        ..superficie = superficie
+        ..antiguedad = antiguedad,
     ),
   );
 

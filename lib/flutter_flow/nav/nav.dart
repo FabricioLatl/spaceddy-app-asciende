@@ -80,7 +80,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'Splash1',
           path: '/splash1',
-          builder: (context, params) => Splash1Widget(),
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'Splash1')
+              : Splash1Widget(),
         ),
         FFRoute(
           name: 'Splash2',
@@ -98,25 +100,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => params.isEmpty
               ? NavBarPage(initialPage: 'Home15Travel')
               : Home15TravelWidget(),
-        ),
-        FFRoute(
-          name: 'ChatPage',
-          path: '/chatPage',
-          asyncParams: {
-            'chatUser': getDoc(['users'], UsersRecord.serializer),
-          },
-          builder: (context, params) => ChatPageWidget(
-            chatUser: params.getParam('chatUser', ParamType.Document),
-            chatRef: params.getParam(
-                'chatRef', ParamType.DocumentReference, false, ['chats']),
-          ),
-        ),
-        FFRoute(
-          name: 'AllChatsPage',
-          path: '/allChatsPage',
-          builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'AllChatsPage')
-              : AllChatsPageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       urlPathStrategy: UrlPathStrategy.path,
