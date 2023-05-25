@@ -119,10 +119,13 @@ class _NavBarPageState extends State<NavBarPage> {
   @override
   Widget build(BuildContext context) {
     final tabs = {
-      'Splash1': Splash1Widget(),
       'Home15Travel': Home15TravelWidget(),
+      'profile': ProfileWidget(),
+      'search': SearchWidget(),
+      'chatpreview': ChatpreviewWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
+
     return Scaffold(
       body: _currentPage ?? tabs[_currentPageName],
       bottomNavigationBar: BottomNavigationBar(
@@ -140,7 +143,15 @@ class _NavBarPageState extends State<NavBarPage> {
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.home_outlined,
+              Icons.home,
+              size: 24.0,
+            ),
+            label: '',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.person,
               size: 24.0,
             ),
             label: 'Home',
@@ -148,7 +159,19 @@ class _NavBarPageState extends State<NavBarPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.home,
+              Icons.search,
+              size: 24.0,
+            ),
+            label: 'Home',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.chat_bubble_outline,
+              size: 24.0,
+            ),
+            activeIcon: Icon(
+              Icons.chat_bubble_rounded,
               size: 24.0,
             ),
             label: '',

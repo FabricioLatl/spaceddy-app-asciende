@@ -45,7 +45,7 @@ class _Splash1WidgetState extends State<Splash1Widget>
         ),
       ],
     ),
-    'textOnPageLoadAnimation1': AnimationInfo(
+    'textOnPageLoadAnimation': AnimationInfo(
       trigger: AnimationTrigger.onPageLoad,
       effects: [
         VisibilityEffect(duration: 350.ms),
@@ -59,26 +59,6 @@ class _Splash1WidgetState extends State<Splash1Widget>
         MoveEffect(
           curve: Curves.easeInOut,
           delay: 350.ms,
-          duration: 400.ms,
-          begin: Offset(0.0, 30.0),
-          end: Offset(0.0, 0.0),
-        ),
-      ],
-    ),
-    'textOnPageLoadAnimation2': AnimationInfo(
-      trigger: AnimationTrigger.onPageLoad,
-      effects: [
-        VisibilityEffect(duration: 400.ms),
-        FadeEffect(
-          curve: Curves.easeInOut,
-          delay: 400.ms,
-          duration: 400.ms,
-          begin: 0.0,
-          end: 1.0,
-        ),
-        MoveEffect(
-          curve: Curves.easeInOut,
-          delay: 400.ms,
           duration: 400.ms,
           begin: Offset(0.0, 30.0),
           end: Offset(0.0, 0.0),
@@ -173,20 +153,10 @@ class _Splash1WidgetState extends State<Splash1Widget>
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 44.0, 0.0, 0.0),
                         child: Text(
-                          'Welcome!',
+                          '¡Bienvenido!',
                           style: FlutterFlowTheme.of(context).displaySmall,
                         ).animateOnPageLoad(
-                            animationsMap['textOnPageLoadAnimation1']!),
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
-                            44.0, 8.0, 44.0, 0.0),
-                        child: Text(
-                          'Thanks for joining! Access or create your account below, and get started on your journey!',
-                          textAlign: TextAlign.center,
-                          style: FlutterFlowTheme.of(context).labelMedium,
-                        ).animateOnPageLoad(
-                            animationsMap['textOnPageLoadAnimation2']!),
+                            animationsMap['textOnPageLoadAnimation']!),
                       ),
                     ],
                   ),
@@ -219,7 +189,7 @@ class _Splash1WidgetState extends State<Splash1Widget>
                                 },
                               );
                             },
-                            text: 'Get Started',
+                            text: '¡Empezemos!',
                             options: FFButtonOptions(
                               width: 230.0,
                               height: 52.0,

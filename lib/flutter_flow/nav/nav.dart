@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:page_transition/page_transition.dart';
 import '../flutter_flow_theme.dart';
-import '../../backend/backend.dart';
+import '/backend/backend.dart';
 
 import '../../auth/base_auth_user_provider.dart';
 
@@ -80,9 +80,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'Splash1',
           path: '/splash1',
-          builder: (context, params) => params.isEmpty
-              ? NavBarPage(initialPage: 'Splash1')
-              : Splash1Widget(),
+          builder: (context, params) => Splash1Widget(),
         ),
         FFRoute(
           name: 'Splash2',
@@ -100,6 +98,92 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => params.isEmpty
               ? NavBarPage(initialPage: 'Home15Travel')
               : Home15TravelWidget(),
+        ),
+        FFRoute(
+          name: 'profile',
+          path: '/profile',
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'profile')
+              : ProfileWidget(),
+        ),
+        FFRoute(
+          name: 'Register',
+          path: '/register',
+          builder: (context, params) => RegisterWidget(),
+        ),
+        FFRoute(
+          name: 'Login',
+          path: '/login',
+          builder: (context, params) => LoginWidget(),
+        ),
+        FFRoute(
+          name: 'search',
+          path: '/search',
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'search')
+              : SearchWidget(
+                  tipodeinmueble:
+                      params.getParam('tipodeinmueble', ParamType.String),
+                ),
+        ),
+        FFRoute(
+          name: 'forgotpassword',
+          path: '/forgotpassword',
+          builder: (context, params) => ForgotpasswordWidget(),
+        ),
+        FFRoute(
+          name: 'seeListing',
+          path: '/seeListing',
+          builder: (context, params) => SeeListingWidget(
+            name: params.getParam('name', ParamType.String),
+            description: params.getParam('description', ParamType.String),
+            images: params.getParam('images', ParamType.String),
+            imagelist:
+                params.getParam<String>('imagelist', ParamType.String, true),
+            price: params.getParam('price', ParamType.double),
+            listingType: params.getParam('listingType', ParamType.String),
+            numBedrooms: params.getParam('numBedrooms', ParamType.int),
+            numBathrooms: params.getParam('numBathrooms', ParamType.int),
+            numParking: params.getParam('numParking', ParamType.int),
+            sqmts: params.getParam('sqmts', ParamType.double),
+            age: params.getParam('age', ParamType.int),
+            location: params.getParam('location', ParamType.LatLng),
+            userThatCreatedIt: params.getParam('userThatCreatedIt',
+                ParamType.DocumentReference, false, ['users']),
+            ref: params
+                .getParam('ref', ParamType.DocumentReference, false, ['chats']),
+          ),
+        ),
+        FFRoute(
+          name: 'CreateListing',
+          path: '/createListing',
+          builder: (context, params) => CreateListingWidget(),
+        ),
+        FFRoute(
+          name: 'ChatPage',
+          path: '/chatPage',
+          asyncParams: {
+            'chatUser': getDoc(['users'], UsersRecord.fromSnapshot),
+          },
+          builder: (context, params) => ChatPageWidget(
+            chatUser: params.getParam('chatUser', ParamType.Document),
+            chatRef: params.getParam(
+                'chatRef', ParamType.DocumentReference, false, ['chats']),
+          ),
+        ),
+        FFRoute(
+          name: 'chatpreview',
+          path: '/chatpreview',
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'chatpreview')
+              : ChatpreviewWidget(),
+        ),
+        FFRoute(
+          name: 'createchat',
+          path: '/createchat',
+          builder: (context, params) => CreatechatWidget(
+            dni: params.getParam('dni', ParamType.String),
+          ),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       urlPathStrategy: UrlPathStrategy.path,
@@ -235,7 +319,8 @@ class FFParameters {
       return param;
     }
     // Return serialized value.
-    return deserializeParam<T>(param, type, isList, collectionNamePath);
+    return deserializeParam<T>(param, type, isList,
+        collectionNamePath: collectionNamePath);
   }
 }
 

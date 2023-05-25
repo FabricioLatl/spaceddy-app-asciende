@@ -173,7 +173,7 @@ class _Splash3WidgetState extends State<Splash3Widget>
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 44.0, 0.0, 0.0),
                         child: Text(
-                          'Welcome!',
+                          '¡Bienvenido!',
                           style: FlutterFlowTheme.of(context).displaySmall,
                         ).animateOnPageLoad(
                             animationsMap['textOnPageLoadAnimation1']!),
@@ -182,9 +182,13 @@ class _Splash3WidgetState extends State<Splash3Widget>
                         padding: EdgeInsetsDirectional.fromSTEB(
                             44.0, 8.0, 44.0, 0.0),
                         child: Text(
-                          'Thanks for joining! Access or create your account below, and get started on your journey!',
+                          'Conversa y comunícate con vendedores de manera fácil, o sube tu anuncio para encontrar el comprador perrfecto para tu inmueble',
                           textAlign: TextAlign.center,
-                          style: FlutterFlowTheme.of(context).labelMedium,
+                          style:
+                              FlutterFlowTheme.of(context).labelMedium.override(
+                                    fontFamily: 'Poppins',
+                                    fontSize: 15.0,
+                                  ),
                         ).animateOnPageLoad(
                             animationsMap['textOnPageLoadAnimation2']!),
                       ),
@@ -219,7 +223,7 @@ class _Splash3WidgetState extends State<Splash3Widget>
                                 },
                               );
                             },
-                            text: 'Get Started',
+                            text: '¡Empezemos!',
                             options: FFButtonOptions(
                               width: 230.0,
                               height: 52.0,
